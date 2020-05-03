@@ -9,3 +9,5 @@ simple demo
  -create .env
  
  -php artisan migrate --seed
+ 
+ -php artisan storage:link
