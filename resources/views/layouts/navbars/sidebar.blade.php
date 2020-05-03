@@ -19,13 +19,13 @@
                 </a>
             </li>
             <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
-                <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
+                <a class="nav-link" data-toggle="collapse" href="#laravelExample1" aria-expanded="true">
                     <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
                     <p>{{ __(' ADMIN') }}
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse show" id="laravelExample">
+                <div class="collapse show" id="laravelExample1">
                     <ul class="nav">
                         <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('profile.edit') }}">
@@ -43,23 +43,23 @@
                 </div>
             </li>
             <li class="nav-item {{ ($activePage == 'company') ? ' active' : '' }}">
-                <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
+                <a class="nav-link" data-toggle="collapse" href="#laravelExample2" aria-expanded="true">
                     <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
                     <p>{{ __('Companies') }}
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse show" id="laravelExample">
+                <div class="collapse show" id="laravelExample2">
                     <ul class="nav">
                         <li class="nav-item{{ $activePage == 'company' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('company.create') }}">
-                                <span class="sidebar-mini"> UP </span>
+                                <span class="sidebar-mini"> CC </span>
                                 <span class="sidebar-normal">{{ __('create company') }} </span>
                             </a>
                         </li>
                         <li class="nav-item{{ $activePage == 'company' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('company.index') }}">
-                                <span class="sidebar-mini"> UM </span>
+                                <span class="sidebar-mini"> AC </span>
                                 <span class="sidebar-normal"> {{ __('all companies') }} </span>
                             </a>
                         </li>
@@ -67,23 +67,23 @@
                 </div>
             </li>
             <li class="nav-item {{ ($activePage == 'employee') ? ' active' : '' }}">
-                <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
+                <a class="nav-link" data-toggle="collapse" href="#laravelExample3" aria-expanded="true">
                     <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
                     <p>{{ __('employees') }}
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse show" id="laravelExample">
+                <div class="collapse show" id="laravelExample3">
                     <ul class="nav">
                         <li class="nav-item{{ $activePage == 'employee' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('employee.create') }}">
-                                <span class="sidebar-mini"> UP </span>
+                                <span class="sidebar-mini"> CE </span>
                                 <span class="sidebar-normal">{{ __('create employee') }} </span>
                             </a>
                         </li>
                         <li class="nav-item{{ $activePage == 'employee' ? ' active' : '' }}">
                             <a class="nav-link" href="{{ route('employee.index') }}">
-                                <span class="sidebar-mini"> UM </span>
+                                <span class="sidebar-mini"> AE </span>
                                 <span class="sidebar-normal"> {{ __('all employees') }} </span>
                             </a>
                         </li>
