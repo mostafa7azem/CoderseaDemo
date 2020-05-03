@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CompanyRequest;
 use App\Models\Company;
+use App\Models\User;
+use App\Notifications\NewCompany;
 use http\Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -47,6 +49,8 @@ class CompanyController extends Controller
     {
         $company = Company::make($request->all());
         $company->save();
+        $user = User::first();
+        $user->notify(new NewCompany("A new company is created on your application."));
         return redirect()->route('company.index');
     }
 
