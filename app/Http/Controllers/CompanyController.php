@@ -19,7 +19,7 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        return view('company.index', ['companies' =>Company::with('logo')->paginate(10)]);
+        return view('company.index', ['companies' =>Company::with('image')->paginate(10)]);
     }
 
     /**

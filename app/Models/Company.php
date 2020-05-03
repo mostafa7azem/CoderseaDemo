@@ -48,8 +48,8 @@ class Company extends Model
         }
 
     }
-    public function logo()
+    public function image()
     {
-        return $this->belongsTo(File::class)->withDefault();
+        return $this->belongsTo(File::class,'logo')->withDefault();
     }
 }

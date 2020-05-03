@@ -43,7 +43,7 @@
                                         <tr>
                                             <td>{{$company->name}}</td>
                                             <td>{{$company->website}}</td>
-                                            <td>{{$company->logo}}</td>
+                                            <td>@include('component.image_thumbnail', ['image' =>  $company->image])</td>
                                             <td>{{$company->email}}</td>
                                             <td class="td-actions text-right">
                                                 <a rel="tooltip" class="btn btn-success btn-link"
