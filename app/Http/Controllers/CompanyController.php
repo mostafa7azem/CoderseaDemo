@@ -100,7 +100,7 @@ class CompanyController extends Controller
     {
         try {
             throw_unless($company->delete(), Exception::class);
-            return redirect()->route('company.index');
+            return redirect()->route('employee.index');
         } catch (\Throwable $e) {
             abort(403);
         }

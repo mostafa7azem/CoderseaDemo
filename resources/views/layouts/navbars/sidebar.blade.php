@@ -66,6 +66,30 @@
                     </ul>
                 </div>
             </li>
+            <li class="nav-item {{ ($activePage == 'employee') ? ' active' : '' }}">
+                <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
+                    <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
+                    <p>{{ __('employees') }}
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse show" id="laravelExample">
+                    <ul class="nav">
+                        <li class="nav-item{{ $activePage == 'employee' ? ' active' : '' }}">
+                            <a class="nav-link" href="{{ route('employee.create') }}">
+                                <span class="sidebar-mini"> UP </span>
+                                <span class="sidebar-normal">{{ __('create employee') }} </span>
+                            </a>
+                        </li>
+                        <li class="nav-item{{ $activePage == 'employee' ? ' active' : '' }}">
+                            <a class="nav-link" href="{{ route('employee.index') }}">
+                                <span class="sidebar-mini"> UM </span>
+                                <span class="sidebar-normal"> {{ __('all employees') }} </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
         </ul>
     </div>
 </div>
