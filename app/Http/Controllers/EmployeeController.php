@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CompanyRequest;
+use App\Http\Requests\EmployeeRequest;
 use App\Models\Company;
 use App\Models\Employee;
 use http\Exception;
@@ -36,7 +38,7 @@ class EmployeeController extends Controller
             'activeMenu'   => "Employee",
             'active'       => "create employee",
             'model'        => new Employee(),
-            'companies' => Company::get()->pluck('name', 'id')->prepend('All', '')
+            'companies'    => Company::get()->pluck('name', 'id')->prepend('All', '')
         ]);
     }
 
@@ -46,7 +48,7 @@ class EmployeeController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(EmployeeRequest $request)
     {
         $employee = Employee::make($request->all());
         $employee->save();
@@ -77,7 +79,7 @@ class EmployeeController extends Controller
             'parent_title' => "employees",
             'activeMenu'   => "employee",
             'model'        => $employee,
-            'companies' => Company::get()->pluck('name', 'id')->prepend('All', '')
+            'companies'    => Company::get()->pluck('name', 'id')->prepend('All', '')
         ]);
     }
 
@@ -88,7 +90,7 @@ class EmployeeController extends Controller
      * @param \App\Models\Employee $employee
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Employee $employee)
+    public function update(EmployeeRequest $request, Employee $employee)
     {
         $employee->update($request->all());
         return redirect()->route('employee.index');
