@@ -28,9 +28,9 @@ class CompanyRequest extends FormRequest
     {
         return [
             'name'    => ['required', 'string', 'max:255'],
-            'website' => ['required', 'string'],
+            'website' => ['required', 'string','url'],
             'email'   => ['required', 'email', Rule::unique((new Company())->getTable())->ignore($this->route()->company->id ?? null)],
-            'logo'    => ['nullable'],
+            'logo'    => ['nullable','dimensions:min_width=100,min_height=100'],
         ];
     }
 }
